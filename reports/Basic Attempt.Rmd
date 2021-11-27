@@ -1,0 +1,25 @@
+---
+title: "Basic attempt"
+author: "xuyanchang"
+date: "11/27/2021"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+Data Type Table:
+
+|      0 |                          1 |          2 |                        3 |                 4 |             5 |                                 6 |                                 7 |                                   |
+| -----: | -------------------------: | ---------: | -----------------------: | ----------------: | ------------: | --------------------------------: | --------------------------------: | --------------------------------- |
+| Term_1 | archetype-survey-responses | enrolments | leaving-survey-responses | question-response | step-activity | weekly-sentiment-survey-responses |                              None | None                              |
+| Term_2 | archetype-survey-responses | enrolments | leaving-survey-responses | question-response | step-activity |                      team-members | weekly-sentiment-survey-responses | None                              |
+| Term_3 | archetype-survey-responses | enrolments | leaving-survey-responses | question-response | step-activity |                      team-members |                       video-stats | weekly-sentiment-survey-responses |
+| Term_4 | archetype-survey-responses | enrolments | leaving-survey-responses | question-response | step-activity |                      team-members |                       video-stats | weekly-sentiment-survey-responses |
+| Term_5 | archetype-survey-responses | enrolments | leaving-survey-responses | question-response | step-activity |                      team-members |                       video-stats | weekly-sentiment-survey-responses |
+| Term_6 | archetype-survey-responses | enrolments | leaving-survey-responses | question-response | step-activity |                      team-members |                       video-stats | weekly-sentiment-survey-responses |
+| Term_7 | archetype-survey-responses | enrolments | leaving-survey-responses | question-response | step-activity |                      team-members |                       video-stats | weekly-sentiment-survey-responses |
