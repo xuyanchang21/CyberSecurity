@@ -73,3 +73,40 @@ Data Type Table:
 | Term_6 | archetype-survey-responses | enrolments | leaving-survey-responses | question-response | step-activity |                      team-members |                       video-stats | weekly-sentiment-survey-responses |
 | Term_7 | archetype-survey-responses | enrolments | leaving-survey-responses | question-response | step-activity |                      team-members |                       video-stats | weekly-sentiment-survey-responses |
 
+
+As the table shows above: The first and second terms course can't be used for analyse, because there are many uncertainty and additional matters in the period of start of the course. Also, as the table shows the first and second terms lack some informations. So, in this project, we focus on using the data from terms 3-7.
+
+
+### Goal 1: 
+For the first goal, it can be infer that we need to use the detail of students, so as we can konw in nomal life, students will give thier personal information when they first enrolled into this course.So start from the data named 'Cyber-Security-(3-7)_enrolment.csv'.
+
+
+Check the last table above, the first thing is to check the basic details and backgrounds of students, so we check the one enrolments randomly choose term 7.
+
+The head data shows in "./reports/Basic Attempt.Rmd".
+
+#### Draw Gender Distribution
+The Gender Distribution plot is:
+
+[Distribution]("./graphs/Gender_dis.png")
+The other genders are just occupy a very little,so we do not need to consider them temporarily
+Proportions of the male and female tend to balance.
+The differences between male and female we can asuume that male have more interests in this kind of course.
+
+#### Draw Country Frequency
+[Frequency]("./graphs/Country_Frequency.png")
+It shows that most of students come from The United Kingdom of Great Britain and Northern Ireland.
+
+And the table in "./reports/Basic Attempt.Rmd" shows that international students is more than 50%, so it is necessary to keep the design of teaching balance, to make all students to adapt it.
+
+For more detailed analysis, we will merge all the data up and do it again.
+
+### Goal 2
+
+For the goal of the level of difficulty, accessing coursework is the one of the most important method, check what the proportion of students who can correctly answer the questions in or out of the online lecture. If more than half of students can't make it, the level of the course or some parts of the course are inappropriate for many of students.
+
+Chek the Data Type Table, there are some files named 'question response',randomly chooose the term 6.
+
+There is a column named 'correct ',it can show if students can answer the questions correctly, so that if the performance is good, it can be assumed that the difficulty of the course is appropriate,but if the number of worng answer is obviouse big in any question, for example almost more than half students failed to answer, the director should consider the level of difficulty or if teachers presented an appropriate lectures.
+
+
