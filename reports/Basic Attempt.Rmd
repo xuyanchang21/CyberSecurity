@@ -2,9 +2,7 @@
 title: "Basic attempt"
 author: "xuyanchang"
 date: "11/27/2021"
-output:
-  html_document:
-    df_print: paged
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
@@ -12,14 +10,36 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-Data Type Table:
+```{r}
+library(here)
+data_path = here('data/')
+term7enrolments <- read.csv(here(data_path,"cyber-security-7_enrolments.csv"))
+head7 <- head(term7enrolments)
+knitr::kable(head7,format="markdown")
+```
 
-|      0 |                          1 |          2 |                        3 |                 4 |             5 |                                 6 |                                 7 |                                   |
-| -----: | -------------------------: | ---------: | -----------------------: | ----------------: | ------------: | --------------------------------: | --------------------------------: | --------------------------------- |
-| Term_1 | archetype-survey-responses | enrolments | leaving-survey-responses | question-response | step-activity | weekly-sentiment-survey-responses |                              None | None                              |
-| Term_2 | archetype-survey-responses | enrolments | leaving-survey-responses | question-response | step-activity |                      team-members | weekly-sentiment-survey-responses | None                              |
-| Term_3 | archetype-survey-responses | enrolments | leaving-survey-responses | question-response | step-activity |                      team-members |                       video-stats | weekly-sentiment-survey-responses |
-| Term_4 | archetype-survey-responses | enrolments | leaving-survey-responses | question-response | step-activity |                      team-members |                       video-stats | weekly-sentiment-survey-responses |
-| Term_5 | archetype-survey-responses | enrolments | leaving-survey-responses | question-response | step-activity |                      team-members |                       video-stats | weekly-sentiment-survey-responses |
-| Term_6 | archetype-survey-responses | enrolments | leaving-survey-responses | question-response | step-activity |                      team-members |                       video-stats | weekly-sentiment-survey-responses |
-| Term_7 | archetype-survey-responses | enrolments | leaving-survey-responses | question-response | step-activity |                      team-members |                       video-stats | weekly-sentiment-survey-responses |
+
+
+```{r}
+gendername = c('female','male','other')
+infor = c(98,115,1)
+cols = c("#ED1C24","#22B14C","#FFC90E")
+piepercent = paste(round(100*infor/sum(infor)), "%")
+pie(infor,labels=piepercent,main = "Gender Distribution", col=cols)
+legend("topright", gendername, cex=0.8, fill=cols)
+```
+
+
+```{r}
+country = term7enrolments$country
+
+country <- country[-which(country=="Unknown")]
+country_count <- table(country)
+#country_count
+barplot(country_count,main="Country Frequency",xlab="Country",ylab = "Frequency")
+```
+
+```{r}
+table(country_count)
+```
+
